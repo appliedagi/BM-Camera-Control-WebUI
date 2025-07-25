@@ -26,21 +26,21 @@
 
         <!-- Camera Select Bar -->
         <div class="flexContainerH" id="cameraSelectContainer">
-            <span class="cameraSwitchLabel selectedCam"><a href="#" onclick="switchCamera(0)">CAM1</a></span>
+            <span class="cameraSwitchLabel selectedCam"><a onclick="switchCamera(0)">CAM1</a></span>
             <span class="camSelectSeparator">|</span>
-            <span class="cameraSwitchLabel"><a href="#" onclick="switchCamera(1)">CAM2</a></span>
+            <span class="cameraSwitchLabel"><a onclick="switchCamera(1)">CAM2</a></span>
             <span class="camSelectSeparator">|</span>
-            <span class="cameraSwitchLabel"><a href="#" onclick="switchCamera(2)">CAM3</a></span>
+            <span class="cameraSwitchLabel"><a onclick="switchCamera(2)">CAM3</a></span>
             <span class="camSelectSeparator">|</span>
-            <span class="cameraSwitchLabel"><a href="#" onclick="switchCamera(3)">CAM4</a></span>
+            <span class="cameraSwitchLabel"><a onclick="switchCamera(3)">CAM4</a></span>
             <span class="camSelectSeparator">|</span>
-            <span class="cameraSwitchLabel"><a href="#" onclick="switchCamera(4)">CAM5</a></span>
+            <span class="cameraSwitchLabel"><a onclick="switchCamera(4)">CAM5</a></span>
             <span class="camSelectSeparator">|</span>
-            <span class="cameraSwitchLabel"><a href="#" onclick="switchCamera(5)">CAM6</a></span>
+            <span class="cameraSwitchLabel"><a onclick="switchCamera(5)">CAM6</a></span>
             <span class="camSelectSeparator">|</span>
-            <span class="cameraSwitchLabel"><a href="#" onclick="switchCamera(6)">CAM7</a></span>
+            <span class="cameraSwitchLabel"><a onclick="switchCamera(6)">CAM7</a></span>
             <span class="camSelectSeparator">|</span>
-            <span class="cameraSwitchLabel"><a href="#" onclick="switchCamera(7)">CAM8</a></span>
+            <span class="cameraSwitchLabel"><a onclick="switchCamera(7)">CAM8</a></span>
         </div>
 
         <!-- Camera Controls Box -->
@@ -51,11 +51,6 @@
                 </div>
 
                 <div class="flexContainerH" id="cameraControlColorCorrectionContainer">
-                    <!-- <div class="flexContainerH" id="cameraControlLGGTabs">
-                        <a href="#" class="ccTabLabel selectedTab" onclick="">Lift</a>
-                        <a href="#" class="ccTabLabel" onclick="">Gamma</a>
-                        <a href="#" class="ccTabLabel" onclick="">Gain</a>
-                    </div> -->
                     <span style="margin-top: 0.5em;">Lift</span>
                     <div class="flexContainerH" id="cameraControlColorCorrectionBottomContainer">
                         <button class="CCResetButton circleButton" onclick="resetCC(0)" title="Reset Lift">&#10227</button>
@@ -110,38 +105,38 @@
                     <div class="ccExposureSettingContainer">
                         <span class="exposureControlLabel">FILTER</span>
                         <div class="ccExposureSettingValueContainer">
-                            <a class="expAdjArr" href="#" onclick="decreaseND()" id="NDL">&#9664</a>
+                            <a class="expAdjArr" onclick="decreaseND()" id="NDL">&#9664</a>
                             <span id="ndFilterSpan" contenteditable="plaintext-only" onkeydown="NDFilterInputHandler()" onmousedown="NDFilterInputHandler()">0</span>
-                            <a class="expAdjArr" href="#" onclick="increaseND()" id="NDR">&#9654</a>
+                            <a class="expAdjArr" onclick="increaseND()" id="NDR">&#9654</a>
                         </div>
                     </div>
                     <div class="ccExposureSettingContainer">
                         <span class="exposureControlLabel">GAIN</span>
                         <div class="ccExposureSettingValueContainer">
-                            <a class="expAdjArr" href="#" onclick="decreaseGain()" id="GAL">&#9664</a>
+                            <a class="expAdjArr" onclick="decreaseGain()" id="GAL">&#9664</a>
                             <span id="gainSpan" contenteditable="plaintext-only" onkeydown="GainInputHandler()" onmousedown="GainInputHandler()">+0db</span>
-                            <a class="expAdjArr" href="#" onclick="increaseGain()" id="GAR">&#9654</a>
+                            <a class="expAdjArr" onclick="increaseGain()" id="GAR">&#9654</a>
                         </div>
                     </div>
                     <div class="ccExposureSettingContainer">
                         <span class="exposureControlLabel">SHUTTER</span>
                         <div class="ccExposureSettingValueContainer">
-                            <a class="expAdjArr" href="#" onclick="decreaseShutter()" id="SHL">&#9664</a>
+                            <a class="expAdjArr" onclick="decreaseShutter()" id="SHL">&#9664</a>
                             <span id="shutterSpan" contenteditable="plaintext-only" onkeydown="handleShutterInput()" onmousedown="handleShutterInput()">1/50</span>
-                            <a class="expAdjArr" href="#" onclick="increaseShutter()" id="SHR">&#9654</a>
+                            <a class="expAdjArr" onclick="increaseShutter()" id="SHR">&#9654</a>
                         </div>
                     </div>
                     <div class="ccExposureSettingContainer">
                         <span class="exposureControlLabel" onclick="swapWBMode()" title="Click here to swap between WB and Tint" id="WBLabel">BALANCE</span>
                         <div class="ccExposureSettingValueContainer" id="WBValueContainer">
-                            <a class="expAdjArr" href="#" onclick="decreaseWhiteBalance()" id="WBL">&#9664</a>
+                            <a class="expAdjArr" onclick="decreaseWhiteBalance()" id="WBL">&#9664</a>
                             <span id="whiteBalanceSpan" contenteditable="plaintext-only" onkeydown="WBInputHandler()" onmousedown="WBInputHandler()">5600K</span>
-                            <a class="expAdjArr" href="#" onclick="increaseWhiteBalance()" id="WBR">&#9654</a>
+                            <a class="expAdjArr" onclick="increaseWhiteBalance()" id="WBR">&#9654</a>
                         </div>
                         <div class="ccExposureSettingValueContainer dNone" id="WBTintValueContainer">
-                            <a class="expAdjArr" href="#" onclick="decreaseWhiteBalanceTint()" id="WBTL">&#9664</a>
+                            <a class="expAdjArr" onclick="decreaseWhiteBalanceTint()" id="WBTL">&#9664</a>
                             <span id="whiteBalanceTintSpan" contenteditable="plaintext-only" onkeydown="WBTInputHandler()" onmousedown="WBTInputHandler()">0</span>
-                            <a class="expAdjArr" href="#" onclick="increaseWhiteBalanceTint()" id="WBLR">&#9654</a>
+                            <a class="expAdjArr" onclick="increaseWhiteBalanceTint()" id="WBLR">&#9654</a>
                         </div>
                     </div>
                     <div class="ccExposureSettingContainer">
@@ -368,5 +363,30 @@ document.addEventListener('keydown', function (e) {
         e.preventDefault(); // prevent browser refresh
         cameras[ci].doAutoFocus();
     }
+});
+
+// Function to handle wheel event on range inputs
+function handleRangeScroll(e) {
+    if (this.disabled) return;
+
+    e.preventDefault();
+
+    const min = parseFloat(this.min) || 0;
+    const max = parseFloat(this.max) || 1;
+    const range = max - min;
+    const delta = e.deltaY < 0 ? 1 : -1; // scroll up = increase, down = decrease
+
+    const step = range * 0.05; // 10% of range
+    let newValue = parseFloat(this.value) + (delta * step);
+
+    newValue = Math.min(max, Math.max(min, newValue));
+
+    this.value = newValue.toFixed(5);
+    this.dispatchEvent(new Event('input'));
+}
+
+// Attach to all sliders
+document.querySelectorAll('input[type="range"]').forEach(slider => {
+    slider.addEventListener('wheel', handleRangeScroll);
 });
 </script>
