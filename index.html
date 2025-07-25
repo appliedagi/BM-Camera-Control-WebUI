@@ -350,10 +350,25 @@
 </html>
 
 <script>
+// Ctrl + R to toggle record
 document.addEventListener('keydown', function (e) {
     if (e.ctrlKey && e.key.toLowerCase() === 'r') {
         e.preventDefault(); // prevent browser refresh
         cameras[ci].toggleRecord();
+    }
+});
+// Ctrl + W to do auto white balance
+document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && e.key.toLowerCase() === 'w') {
+        e.preventDefault(); // prevent browser refresh
+        cameras[ci].doAutoWhitebalance();
+    }
+});
+// Ctrl + F to do auto focus
+document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && e.key.toLowerCase() === 'f') {
+        e.preventDefault(); // prevent browser refresh
+        cameras[ci].doAutoFocus();
     }
 });
 </script>
