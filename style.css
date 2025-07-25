@@ -1,4 +1,4 @@
-/* Sorry the CSS is such a mess. -DS */
+/* Optimized for a modern black layout. -DS */
 
 /* ============= WHOLE PAGE STYLES ================== */
 
@@ -7,13 +7,13 @@
   #cameraControlsContainer {
     width: 100vw !important;
   }
-
   #cameraControlsContainerExpanded {
     display: none !important;
   }
-
   body {
     font-size: 125%;
+    background: #000 !important;
+    color: #fff !important;
   }
 }
 
@@ -21,13 +21,13 @@
   #cameraControlsContainer {
     width: 30vw !important;
   }
-
   #headerContainer {
     height: 5vh !important;
   }
-
   body {
     font-size: 70%;
+    background: #000 !important;
+    color: #fff !important;
   }
 }
 
@@ -48,17 +48,16 @@
 body {
   font-family: "NotoSansDisplay", sans-serif;
   font-weight: 100;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
-  background: #181818;
-  color: white;
+  background: #000;
+  color: #fff;
 }
 
 /* Page Body Flexboxes */
 .flexContainerH {
   display: flex;
 }
-
 .flexContainerV {
   display: inline-flex;
 }
@@ -67,35 +66,37 @@ body {
 
 input[type="text"] {
   border-radius: 0.5vh;
-  background: rgb(30, 30, 30);
-  color: white;
+  background: #111;
+  color: #fff;
   height: 2em;
   width: 10vw;
-  border: 1px solid rgb(20, 20, 20);
+  border: 1px solid #222;
   text-align: center;
   font-family: "NotoSansDisplay", sans-serif;
   outline: none;
-  margin: 0px 0.5vw;
+  margin: 0 0.5vw;
 }
 
 input[type="text"]:focus {
-  border: 1px solid rgb(150, 58, 0);
+  border: 1px solid #e53935;
+  outline: none;
 }
 
 input[type="number"] {
   border-radius: 0.5vh;
-  background: rgb(30, 30, 30);
-  color: white;
+  background: #111;
+  color: #fff;
   height: 2em;
   width: 4.666vw;
-  border: 1px solid rgb(20, 20, 20);
+  border: 1px solid #222;
   text-align: center;
   font-family: "NotoSansDisplay", sans-serif;
   outline: none;
 }
 
 input[type="number"]:focus {
-  border: 1px solid rgb(150, 58, 0);
+  border: 1px solid #e53935;
+  outline: none;
 }
 
 input[type="range"][orient="vertical"] {
@@ -105,48 +106,57 @@ input[type="range"][orient="vertical"] {
   height: 80%;
 }
 
+input[type="range"] {
+  accent-color: #e53935;
+}
+input[type="range"]:focus {
+  outline: none;
+  border-color: #e53935;
+}
+
 select {
   border-radius: 0.5vh;
-  background: rgb(30, 30, 30);
-  color: white;
+  background: #111;
+  color: #fff;
   height: 2em;
   width: 5vw;
-  border: 1px solid rgb(20, 20, 20);
+  border: 1px solid #222;
   text-align: center;
   font-family: "NotoSansDisplay", sans-serif;
   outline: none;
 }
 
 select:focus {
-  border: 1px solid rgb(150, 58, 0);
+  border: 1px solid #e53935;
+  outline: none;
 }
 
 button {
   font-family: "NotoSansDisplay", sans-serif;
-  background: #181818;
-  background: linear-gradient(0deg, #232323 0%, #404040 100%);
-  border: 0.3vh solid black;
-  outline: 0.3vh solid #404040;
-  color: white;
+  background: #000;
+  border: 1px solid #e53935;
+  color: #fff;
   height: fit-content;
   width: fit-content;
   border-radius: 0.4em;
   padding: 0.5vh 1vw;
   margin: 1vh;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
-
 button:hover {
-  background: #313131;
-  background: linear-gradient(0deg, #313131 0%, #4d4d4d 100%);
+  background: #e53935;
+  color: #fff;
+  border-color: #fff;
 }
-
 button:active {
-  background: #181818;
+  background: #111;
+  color: #e53935;
   box-shadow: inset 0 0 1em #090909;
 }
 
 input[type="file"]:focus {
-  border: 1px solid rgb(150, 58, 0);
+  border: 1px solid #e53935;
+  outline: none;
 }
 
 #secureCheckboxLabel {
@@ -155,9 +165,8 @@ input[type="file"]:focus {
 
 /* Horizontal Container Styles */
 #headerContainer {
-  background: #181818;
-  background: linear-gradient(0deg, #181818 0%, #303030 100%);
-  border-bottom: 1px solid black;
+  background: #000;
+  border-bottom: 1px solid #222;
   width: 100%;
   height: 7.77vh;
   flex-wrap: wrap;
@@ -171,8 +180,8 @@ input[type="file"]:focus {
 }
 
 #cameraSelectContainer {
-  background: #222222;
-  border: 1px solid black;
+  background: #111;
+  border: 1px solid #222;
   width: 100%;
   height: 3.53vh;
   color: #474747;
@@ -195,17 +204,15 @@ input[type="file"]:focus {
 }
 
 .cameraSwitchLabel.selectedCam a {
-  color: #e66c01;
+  color: #e53935;
 }
 
 #allCamerasContainer {
   width: 100%;
   height: 83.1vh;
-
   overflow-x: scroll;
   overflow-y: hidden;
-
-  scrollbar-color: #202020 #151515;
+  scrollbar-color: #222 #000;
 }
 
 #formatDisplay span {
@@ -213,9 +220,8 @@ input[type="file"]:focus {
 }
 
 #footerContainer {
-  background: #181818;
-  background: linear-gradient(0deg, #181818 0%, #303030 100%);
-  border: 1px solid black;
+  background: #000;
+  border: 1px solid #222;
   width: 100%;
   height: 5vh;
   position: fixed;
@@ -247,28 +253,22 @@ input[type="file"]:focus {
 
 #footerLinks a {
   text-decoration: none;
-  color: #e66c01;
+  color: #e53935;
 }
 
 /* Camera Controls Container */
 #cameraControlsContainer {
   width: 15vw;
   height: 100%;
-  background: #282828;
+  background: #000;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #222;
   flex-shrink: 0;
 }
 
 .liveCam {
-  background: rgb(184, 3, 16);
-  background: linear-gradient(
-    90deg,
-    rgba(184, 3, 16, 1) 0%,
-    rgba(255, 0, 19, 1) 15%,
-    rgba(255, 0, 19, 1) 85%,
-    rgba(184, 3, 16, 1) 100%
-  );
+  background: #e53935;
+  color: #fff;
 }
 
 #cameraControlHeadContainer {
@@ -317,7 +317,7 @@ h2 {
 }
 
 #cameraControlLGGTabs a.selectedTab {
-  color: #e66c01;
+  color: #e53935;
 }
 
 .ccExposureSettingValueContainer .expAdjArr {
@@ -334,7 +334,7 @@ h2 {
 }
 
 .ccExposureSettingValueContainer:hover .expAdjArr:active {
-  color: #e66c01;
+  color: #e53935;
 }
 
 #cameraControlColorCorrectionBottomContainer {
@@ -422,16 +422,16 @@ h2 {
 #cameraControlsContainerExpanded {
   width: 84.75vw;
   height: 100%;
-  background: #282828;
+  background: #000;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #222;
   flex-shrink: 0;
 }
 
 #cameraControlExpandedHeadContainer {
   width: 100%;
   height: 5vh;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #222;
   align-items: center;
   justify-content: space-between;
 }
@@ -447,11 +447,11 @@ h2 {
 }
 
 #connectionErrorSpan {
-  color: #e64b3d;
+  color: #e53935;
 }
 
 #manualRequestResponseP {
-  color: #6e6e6e;
+  color: #e53935;
 }
 
 /* Table Controls */
