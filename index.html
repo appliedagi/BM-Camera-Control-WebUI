@@ -20,8 +20,8 @@
         <!------ Page Content ------>
 
         <!-- Header Div -->
-        <div class="flexContainerH" id="headerContainer" onclick="document.getElementById('footerContainer').style.display='flex'">
-            <h1>Camera Control for Blackmagic</h1>
+        <div class="flexContainerH" id="headerContainer" style="height: 3.5vh; min-height: 28px; padding: 0.3em 0.8em; font-size: 1em; border-radius: 1em 1em 0 0;" onclick="document.getElementById('footerContainer') && (document.getElementById('footerContainer').style.display='flex')">
+            <h1 style="font-size: 1em; margin-left: 0.5em; font-weight: 700; letter-spacing: 0.04em;">Camera Control for Blackmagic</h1>
         </div>
 
         <!-- Camera Select Bar -->
@@ -328,17 +328,7 @@
             
         </div>
 
-        <!-- Footer Div -->
-        <div class="flexContainerH" id="footerContainer" onclick="this.style.display='none'">
-            <div id="footerLeft">
-                <span class="">v1.5.0</span>
-                <span id="activeElementSpan"></span>
-            </div>
-            <div id="footerLinks">
-                <span><a id="documentationLink" href="https://documents.blackmagicdesign.com/DeveloperManuals/BlackmagicCameraControl.pdf" target="_blank">Documentation</a></span>
-                <span><a id="githubLink" href="https://github.com/appliedagi/BM-Camera-Control-WebUI" target="_blank">GitHub</a></span>
-            </div>
-        </div>
+        <!-- Footer Div removed for optimization -->
     </body>
 </html>
 

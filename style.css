@@ -168,15 +168,21 @@ input[type="file"]:focus {
   background: #000;
   border-bottom: 1px solid #222;
   width: 100%;
-  height: 7.77vh;
+  height: 3.5vh;
+  min-height: 28px;
+  padding: 0.3em 0.8em;
+  font-size: 1em;
+  border-radius: 1em 1em 0 0;
   flex-wrap: wrap;
   align-content: center;
 }
 
 #headerContainer h1 {
   color: white;
-  margin-left: 1.3vw;
-  font-weight: 100;
+  font-size: 1em;
+  margin-left: 0.5em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 #cameraSelectContainer {
@@ -209,7 +215,7 @@ input[type="file"]:focus {
 
 #allCamerasContainer {
   width: 100%;
-  height: 83.1vh;
+  height: 93vh;
   overflow-x: scroll;
   overflow-y: hidden;
   scrollbar-color: #222 #000;
@@ -220,40 +226,7 @@ input[type="file"]:focus {
 }
 
 #footerContainer {
-  background: #000;
-  border: 1px solid #222;
-  width: 100%;
-  height: 5vh;
-  position: fixed;
-  bottom: 0;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#footerContainer button {
-  padding: 0.4em 0.8em;
-  font-size: x-small;
-}
-
-#refreshingText.refreshing {
-  color: #606060ff;
-}
-
-#refreshingText {
-  color: #60606000;
-}
-
-#footerLinks span {
-  margin-right: 1.25vw;
-}
-
-#footerLeft span {
-  margin-left: 1.25vw;
-}
-
-#footerLinks a {
-  text-decoration: none;
-  color: #e53935;
+  display: none !important;
 }
 
 /* Camera Controls Container */
