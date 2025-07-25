@@ -32,7 +32,8 @@
   gap: 0.7em;
   background: rgba(40, 40, 40, 0.7);
   padding: 0.3em 1em;
-  box-shadow: 0 0 0.5em #e5393533;
+  border-radius: 1em;
+  box-shadow: 0.3em 0.3em 0.5em #e5393533;
 }
 /* Optimized for a modern black layout. -DS */
 
@@ -449,7 +450,7 @@ h2 {
   flex-direction: column;
   display: inline-flex;
   height: inherit;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 #timecodeLabel {
@@ -466,12 +467,13 @@ h2 {
 /* Table Controls */
 
 .tableControl {
-  margin-left: 1.5vw;
+  margin-left: 2vw;
+  margin-bottom: 1.5vh;
 }
 
 .tableControl h3 {
   font-weight: 100;
-  margin: 0.5vh 0vw;
+  margin: 0vh 0vw;
 }
 
 table,
