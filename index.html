@@ -4,7 +4,7 @@
 <html>
     <head>
         <!-- Page title and metadata -->
-        <title>Camera Control WebUI for Blackmagic Cameras</title>
+        <title>Camera Control for Blackmagic Cameras</title>
         <meta charset="UTF-8">
         <meta name="description" content="JS-based web interface for controlling Blackmagic Design cameras via the official REST API">
         <meta name="author" content="Dylan Speiser">
@@ -22,7 +22,7 @@
 
         <!-- Header Div -->
         <div class="flexContainerH" id="headerContainer" onclick="document.getElementById('footerContainer').style.display='flex'">
-            <h1>Camera Control WebUI for Blackmagic Cameras</h1>
+            <h1>Camera Control for Blackmagic Cameras</h1>
         </div>
 
         <!-- Camera Select Bar -->
@@ -348,3 +348,12 @@
         </div>
     </body>
 </html>
+
+<script>
+document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && e.key.toLowerCase() === 'r') {
+        e.preventDefault(); // prevent browser refresh
+        cameras[ci].toggleRecord();
+    }
+});
+</script>
