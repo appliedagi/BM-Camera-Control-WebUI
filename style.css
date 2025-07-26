@@ -38,6 +38,11 @@
   border-radius: 1em;
   box-shadow: 0.3em 0.3em 0.5em #e5393533;
 }
+
+.imageSmall {
+  width: 1.4em;
+  height: 1.4em;
+}
 /* Optimized for a modern black layout. -DS */
 
 /* ============= WHOLE PAGE STYLES ================== */
