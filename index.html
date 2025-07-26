@@ -11,6 +11,8 @@
 
         <!-- Linking the stylesheet -->
         <link rel="stylesheet" href="style.css">
+        <!-- Lucide Icons CDN -->
+        <script src="https://unpkg.com/lucide@latest"></script>
     </head>
     <body onload="bodyOnLoad()">
         <!-- JavaScript Linking -->
@@ -174,14 +176,14 @@
                             <span id="formatFPS">FPS</span>
                         </div>
                         <div id="transportControls">
-                            <!-- These will be sticky buttons for loop, single clip, record -->
-                            <button class="circleButton" onclick="loopHandler('Loop')" title="Loop" id="loopButton">&#8635</button>
-                            <button class="circleButton" onclick="loopHandler('Single Clip')" title="Single Clip" id="singleClipButton">S</button>
-                            <button class="circleButton" onclick="cameras[ci].seek(false)" title="Back">&#9204</button>
-                            <button class="circleButton" onclick="cameras[ci].seek(true)" title="Forward">&#9205</button>
-                            <button class="circleButton" onclick="cameras[ci].toggleRecord()" title="Record" style="color: red;">&#9210</button>
-                            <button class="circleButton" onclick="cameras[ci].play()" title="Play">&#9654</button>
-                            <button class="circleButton" onclick="cameras[ci].stop()" title="Stop">&#9209</button>
+                            <!-- Lucide icons for all transport controls, larger size -->
+                            <button class="circleButton" onclick="loopHandler('Loop')" title="Loop" id="loopButton"><i data-lucide="repeat" style="width:2em;height:2em;"></i></button>
+                            <button class="circleButton" onclick="loopHandler('Single Clip')" title="Single Clip" id="singleClipButton"><i data-lucide="film" style="width:2em;height:2em;"></i></button>
+                            <button class="circleButton" onclick="cameras[ci].seek(false)" title="Back"><i data-lucide="skip-back" style="width:2em;height:2em;"></i></button>
+                            <button class="circleButton" onclick="cameras[ci].seek(true)" title="Forward"><i data-lucide="skip-forward" style="width:2em;height:2em;"></i></button>
+                            <button class="circleButton" onclick="cameras[ci].toggleRecord()" title="Record" id="recordButton"><i data-lucide="circle" style="width:2em;height:2em;color:#e53935;"></i></button>
+                            <button class="circleButton" onclick="cameras[ci].play()" title="Play"><i data-lucide="play" style="width:2em;height:2em;"></i></button>
+                            <button class="circleButton" onclick="cameras[ci].stop()" title="Stop"><i data-lucide="circle-stop" style="width:2em;height:2em;"></i></button>
                         </div>
                         <h2 id="timecodeLabel">TIMECODE</h2>
                     </div>
@@ -334,6 +336,11 @@
 </html>
 
 <script>
+// Lucide icons init
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.lucide) lucide.createIcons();
+});
+
 // Ctrl + R to toggle record
 document.addEventListener('keydown', function (e) {
     if (e.ctrlKey && e.key.toLowerCase() === 'r') {
